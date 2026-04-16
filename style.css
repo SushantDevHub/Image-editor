@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* 
+     by default, it is installed on every system, so it is a good choice for a default font. 
+     It is a sans-serif font that is designed for readability on screens.
+      It has a clean and modern look, and it is widely used in web design.
+*/
+html{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--bg-primary-color);
+}
+ 
+
+main{
+    width: 100%;
+}
+
+main section{
+    width: 100%;
+    padding: var(--padding-2xl);
+}
+.btn{
+    padding:var(--padding-sm) var(--padding-lg) ;
+    border: none;
+    border-radius: var(--border-radius-md);
+    outline: none;
+    background-color: var(--bg-active-color);
+    cursor: pointer;
+
+}
+#reset-btn{
+    background-color: var(--bg-danger-color);
+    color: var(--text-primary-color);
+}
+#download-btn{
+    background-color: var(--bg-success-color);
+    color: var(--text-primary-color);
+}
+
+main section .top{
+    display: flex;
+    gap: var(--gutter-md);
+    align-items: center;
+ 
+}
