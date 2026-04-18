@@ -27,6 +27,8 @@ main{
 main section{
     width: 100%;
     padding: var(--padding-2xl);
+    display: flex;
+    gap: var(--gutter-lg);
 }
 .btn{
     padding:var(--padding-sm) var(--padding-lg) ;
@@ -56,6 +58,9 @@ main section .left{
 
 main section .right{
     width: 30%;
+background-color: var(--bg-secondary-color);
+    padding: var(--padding-lg);
+    border-radius: var(--border-radius-xl);
     
 }
 main section .top{
@@ -92,4 +97,17 @@ main section .bottom .placeholder i{
 main section .bottom .placeholder p{
     font-size: var(--font-size-lg);
     
+}
+main section .right {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gutter-md);
+}
+main section .right .filter{
+    width: 100%;
+}
+main section .right .filter input{
+    width: 100%;
+    outline: none;
+
 }
