@@ -62,7 +62,7 @@ const filters = {
 
 }
 
-const filterContainer = document.querySelector('.filters')
+const filtersContainer = document.querySelector('.filters')
 
 function createFilterElement(name, unit = '%',value, min, max) {
     const div = document.createElement('div')
@@ -86,7 +86,7 @@ function createFilterElement(name, unit = '%',value, min, max) {
 
 Object.keys(filters).forEach(key => {
    
-    const filterElement = createFilterElement(key, filters[ key].unit, filters[key].value, filters[key].min, filters[key].max)
+    const filterElement = createFilterElement(key, filters[key].unit, filters[key].value, filters[key].min, filters[key].max)
     filtersContainer.appendChild(filterElement)
 
 })
