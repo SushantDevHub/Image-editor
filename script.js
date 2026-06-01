@@ -1,4 +1,4 @@
-const filters = {
+let filters = {
     brightness: {
         value: 100,
         min: 0,
@@ -59,7 +59,7 @@ const filters = {
 const imageCanvas = document.querySelector('#image-canvas')
 const imageInput = document.querySelector('#image-input')
 const canvasCtx = imageCanvas.getContext('2d')
-
+const resetButton = document.querySelector('#reset-btn')
 let file = null
 let image = null
 
@@ -132,3 +132,65 @@ function applyFilters() {
     `
     canvasCtx.drawImage(image, 0, 0)
 }
+
+resetButton.addEventListener('click', () => {
+    filters = {
+        brightness: {
+            value: 100,
+            min: 0,
+            max: 200,
+            unit: '%'
+        },
+        contrast: {
+            value: 100,
+            min: 0,
+            max: 200,
+            unit: '%'
+        },
+        saturation: {
+            value: 100,
+            min: 0,
+            max: 200,
+            unit: '%'
+        },
+        hueRotation: {
+            value: 0,
+            min: 0,
+            max: 360,
+            unit: 'deg'
+        },
+        blur: {
+            value: 0,
+            min: 0,
+            max: 10,
+            unit: 'px'
+        },
+        grayscale: {
+            value: 0,
+            min: 0,
+            max: 100,
+            unit: '%'
+        },
+        sepia: {
+            value: 0,
+            min: 0,
+            max: 100,
+            unit: '%'
+        },
+        opacity: {
+            value: 100,
+            min: 0,
+            max: 100,
+            unit: '%'
+        },
+        invert: {
+            value: 0,
+            min: 0,
+            max: 100,
+            unit: '%'
+        },
+    }
+
+
+    applyFilters()
+})
